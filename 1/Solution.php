@@ -23,16 +23,4 @@ class Solution {
     }
 }
 
-$solution = new Solution();
-$test = [
-    [2,7,11,15],
-    [-3,1,3,9,11]
-];
-$target = [9,0];
-
-foreach($test as $key => $nums) {
-    $return = $solution->twoSum($nums, $target[$key]);
-    echo '[', join(',', $return), ']';
-}
-
 
