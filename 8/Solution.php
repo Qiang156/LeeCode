@@ -31,6 +31,8 @@ class Solution {
             if($state == 'number') {
                 $ans = $ans * 10 + $s[$i];
                 $ans = $sign == 1 ? min($ans, self::INTEGER_MAX) : min($ans,-1*self::INTEGER_MIN);
+            } else if ($state == 'end') {
+                break;
             } else if($state == 'signed') {
                 $sign = $s[$i] == '+' ? 1 : -1;
             }
